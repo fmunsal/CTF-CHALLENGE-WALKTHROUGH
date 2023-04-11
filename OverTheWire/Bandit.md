@@ -19,37 +19,37 @@ ssh bandit1@bandit.labs.overthewire.org -p 2220
 ```
 ## Level 1 ====> Level 2
 ```console
-bandit0@bandit1:~$ ls -a
+bandit1@bandit:~$ ls -a
 - . .. .bash_logout .bashrc .profile
-bandit0@bandit1:~$ cat ./-
+bandit1@bandit:~$ cat ./-
 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 ```
 ## Level 2 ====> Level 3
 ```console
-bandit0@bandit2:~$ ls 
+bandit2@bandit:~$ ls 
 spaces in this filename
-bandit0@bandit2:~$ cat ./spaces\ in\ this\ filename
+bandit2@bandit:~$ cat ./spaces\ in\ this\ filename
 aBZ0W%EmUfAf/kHTQeOwf8bauFJ2lAiG
 ```
 ## Level 3 ====> Level 4
 ```console
-bandit3@bandit4:~$ ls 
+bandit3@bandit:~$ ls 
 inhere
-bandit3@bandit4:~$ cd inhere/
-bandit3@bandit4:~$ ls -a
+bandit3@bandit:~$ cd inhere/
+bandit3@bandit:~/inhere$ ls -a
 . .. .hidden
-bandit3@bandit4:~$ cat ./.hidden
+bandit3@bandit:~$ cat ./.hidden
 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 ```
 ## Level 4 ====> Level 5
 ```console
-bandit4@bandit3:~$ ls 
+bandit4@bandit:~$ ls 
 inhere
-bandit4@bandit3:~$ cd inhere/
-bandit4@bandit3:~$ ls -a
-.   -file00 -file02 -file04 -file06 -file08 \n
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~inhere$ ls -a
+.   -file00 -file02 -file04 -file06 -file08 
 ..  -file01 -file03 -file05 -file07 -file09
-bandit4@bandit3:~$ file ./-*
+bandit4@bandit:~inhere$ file ./*
 ./-file00: data
 ./-file01: data
 ./-file02: data
@@ -60,6 +60,21 @@ bandit4@bandit3:~$ file ./-*
 ./-file07: ASCII text
 ./-file08: data
 ./-file09: data
-bandit4@bandit3:~$ cat ./-file07
+bandit4@bandit:~inhere$ cat ./-file07
 lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+```
+## Level 5 ====> Level 6
+```console
+bandit5@bandit:~$ ls 
+inhere
+bandit5@bandit:~$ cd inhere/
+bandit5@bandit:~inhere$ find -type f -size 1033c -perm /u=r
+./maybehere07/.file2
+bandit5@bandit:~inhere$ cat ./maybehere07/.file2
+P4L4vucdmLnm8I7Vl/jG1ApGSfjYKqJU
+```
+## Level 6 ====> Level 7
+```console
+bandit6@bandit:~$ find / -user bandit7 -group -bandit6 -size 33c 2>/dev/null
+z7WtoNQU2XfjmMtWA8u%rN4vzqu4v99S
 ```
