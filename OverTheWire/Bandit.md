@@ -124,3 +124,10 @@ bandit10@bandit:~$ cat data.txt | base64 --decode
 The password is 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBm
 ```
 # Level 11 ====> Level 12
+```console
+bandit11@bandit:~$ ls
+data.txt
+bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+```
+
