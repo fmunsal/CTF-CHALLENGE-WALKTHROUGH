@@ -14,25 +14,25 @@ bandit0@bandit0:~$ cat readme
 NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 ```
 Now, from here type ```exit```  use SSH (on port 2220) to log into that level and continue the game
-```sh
+```console
 ssh bandit1@bandit.labs.overthewire.org -p 2220 
 ```
 ## Level 1 ====> Level 2
-```sh
+```console
 bandit0@bandit1:~$ ls -a
 - . .. .bash_logout .bashrc .profile
 bandit0@bandit1:~$ cat ./-
 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 ```
 ## Level 2 ====> Level 3
-```sh
+```console
 bandit0@bandit2:~$ ls 
 spaces in this filename
 bandit0@bandit2:~$ cat ./spaces\ in\ this\ filename
 aBZ0W%EmUfAf/kHTQeOwf8bauFJ2lAiG
 ```
 ## Level 3 ====> Level 4
-```sh
+```console
 bandit0@bandit3:~$ ls 
 inhere
 bandit0@bandit3:~$ cd inhere/
