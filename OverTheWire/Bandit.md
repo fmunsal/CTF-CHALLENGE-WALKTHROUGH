@@ -85,3 +85,42 @@ data.txt
 bandit7@bandit:~$ grep millionth data.txt
 millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 ```
+## Level 8 ====> Level 9
+```console
+bandit8@bandit:~$ ls
+data.txt
+bandit8@bandit:~$ grep [a-zA-Z0-9] data.txt |sort| uniq -u
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+```
+# Level 9 ====> Level 10
+```console
+bandit9@bandit:~$ ls
+data.txt
+bandit9@bandit:~$ strings data.txt | grep "="
+ds=5
+f============ theM
+=XeOh
+=vb
+O=Nq
+=I6a
+============ password
+============ is
+2\.=
+u=]T
+%AM_9=
+1~=y
+Q=9(
+j=GD
+b=fF
+0?F=(
+.DX_/=
+============ G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+```
+# Level 10 ====> Level 11
+```console
+bandit10@bandit:~$ ls
+data.txt
+bandit10@bandit:~$ cat data.txt | base64 --decode
+The password is 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBm
+```
+# Level 11 ====> Level 12
