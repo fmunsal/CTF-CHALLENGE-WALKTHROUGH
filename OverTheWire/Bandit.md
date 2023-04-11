@@ -18,6 +18,7 @@ Now, from here type ```exit```  use SSH (on port 2220) to log into that level an
 ssh bandit1@bandit.labs.overthewire.org -p 2220 
 ```
 ## Level 1 ====> Level 2
+The password for the next level is stored in a file called - located in the home directory
 ```console
 bandit1@bandit:~$ ls -a
 - . .. .bash_logout .bashrc .profile
@@ -25,6 +26,7 @@ bandit1@bandit:~$ cat ./-
 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 ```
 ## Level 2 ====> Level 3
+The password for the next level is stored in a file called spaces in this filename located in the home directory
 ```console
 bandit2@bandit:~$ ls 
 spaces in this filename
@@ -32,6 +34,7 @@ bandit2@bandit:~$ cat ./spaces\ in\ this\ filename
 aBZ0W%EmUfAf/kHTQeOwf8bauFJ2lAiG
 ```
 ## Level 3 ====> Level 4
+The password for the next level is stored in a hidden file in the inhere directory.
 ```console
 bandit3@bandit:~$ ls 
 inhere
@@ -42,6 +45,7 @@ bandit3@bandit:~$ cat ./.hidden
 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 ```
 ## Level 4 ====> Level 5
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
 ```console
 bandit4@bandit:~$ ls 
 inhere
@@ -64,6 +68,11 @@ bandit4@bandit:~inhere$ cat ./-file07
 lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 ```
 ## Level 5 ====> Level 6
+The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:
+
+human-readable
+1033 bytes in size
+not executable
 ```console
 bandit5@bandit:~$ ls 
 inhere
@@ -74,11 +83,17 @@ bandit5@bandit:~inhere$ cat ./maybehere07/.file2
 P4L4vucdmLnm8I7Vl/jG1ApGSfjYKqJU
 ```
 ## Level 6 ====> Level 7
+The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
 ```console
 bandit6@bandit:~$ find / -user bandit7 -group -bandit6 -size 33c 2>/dev/null
 z7WtoNQU2XfjmMtWA8u%rN4vzqu4v99S
 ```
 ## Level 7 ====> Level 8
+The password for the next level is stored in the file data.txt next to the word millionth
 ```console
 bandit7@bandit:~$ ls
 data.txt
@@ -86,6 +101,7 @@ bandit7@bandit:~$ grep millionth data.txt
 millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 ```
 ## Level 8 ====> Level 9
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
 ```console
 bandit8@bandit:~$ ls
 data.txt
@@ -93,6 +109,7 @@ bandit8@bandit:~$ grep [a-zA-Z0-9] data.txt |sort| uniq -u
 EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 ```
 # Level 9 ====> Level 10
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
 ```console
 bandit9@bandit:~$ ls
 data.txt
@@ -117,6 +134,7 @@ b=fF
 ============ G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
 ```
 # Level 10 ====> Level 11
+The password for the next level is stored in the file data.txt, which contains base64 encoded data
 ```console
 bandit10@bandit:~$ ls
 data.txt
@@ -124,6 +142,7 @@ bandit10@bandit:~$ cat data.txt | base64 --decode
 The password is 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBm
 ```
 # Level 11 ====> Level 12
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
 ```console
 bandit11@bandit:~$ ls
 data.txt
