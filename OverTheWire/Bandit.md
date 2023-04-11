@@ -33,14 +33,33 @@ aBZ0W%EmUfAf/kHTQeOwf8bauFJ2lAiG
 ```
 ## Level 3 ====> Level 4
 ```console
-bandit0@bandit3:~$ ls 
+bandit3@bandit4:~$ ls 
 inhere
-bandit0@bandit3:~$ cd inhere/
-bandit0@bandit3:~$ ls -a
+bandit3@bandit4:~$ cd inhere/
+bandit3@bandit4:~$ ls -a
 . .. .hidden
-bandit0@bandit3:~$ cat ./.hidden
+bandit3@bandit4:~$ cat ./.hidden
 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
 ```
 ## Level 4 ====> Level 5
-```
+```console
+bandit4@bandit3:~$ ls 
+inhere
+bandit4@bandit3:~$ cd inhere/
+bandit4@bandit3:~$ ls -a
+.   -file00 -file02 -file04 -file06 -file08 \n
+..  -file01 -file03 -file05 -file07 -file09
+bandit4@bandit3:~$ file ./-*
+./-file00: data
+./-file01: data
+./-file02: data
+./-file03: data
+./-file04: data
+./-file05: data
+./-file06: data
+./-file07: ASCII text
+./-file08: data
+./-file09: data
+bandit4@bandit3:~$ cat ./-file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 ```
