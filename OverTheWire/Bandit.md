@@ -78,3 +78,10 @@ P4L4vucdmLnm8I7Vl/jG1ApGSfjYKqJU
 bandit6@bandit:~$ find / -user bandit7 -group -bandit6 -size 33c 2>/dev/null
 z7WtoNQU2XfjmMtWA8u%rN4vzqu4v99S
 ```
+## Level 7 ====> Level 8
+```console
+bandit7@bandit:~$ ls
+data.txt
+bandit7@bandit:~$ grep millionth data.txt
+millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+```
