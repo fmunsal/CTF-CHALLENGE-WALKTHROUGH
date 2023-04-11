@@ -2,7 +2,7 @@
 To get to level 0 we need to simply SSH into Bandit.
 username:bandit0
 password:bandit0 
-```sh
+```console
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 ```
 ## Level 0 ====> Level 1
